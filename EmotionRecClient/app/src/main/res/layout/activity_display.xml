@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</LinearLayout>
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.wandou.emotionrecclient.DisplayActivity" >
+
+    <com.wandou.emotionrecclient.MySurfaceView
+        android:id="@+id/surfaceViewVR"
+        android:layout_width="fill_parent"
+        android:layout_height="900dp"
+        android:visibility="invisible"
+        android:layout_above="@+id/surfaceViewEEG"
+        android:layout_alignEnd="@+id/relativeLayout" />
+
+    <RelativeLayout
+        android:id="@+id/loginLayoutVR"
+        android:layout_width="fill_parent"
+        android:layout_height="900dp"
+        android:layout_above="@+id/surfaceViewEEG"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_alignEnd="@+id/relativeLayout">
+
+    <EditText
+        android:id="@+id/serverIPVR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:text="116.57.86.70"
+        android:layout_alignBaseline="@+id/textViewVR1"
+        android:layout_alignBottom="@+id/textViewVR1"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/portNumVR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="20172"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/serverIPVR">
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewVR2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="端口号："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/serverIPVR" />
+
+    <TextView
+        android:id="@+id/textViewVR1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="46dp"
+        android:text="PC端IP："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/portNumVR" />
+
+        <Button
+        android:id="@+id/buttonConnectVR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接PC"
+            android:layout_below="@+id/portNumVR"
+            android:layout_alignStart="@+id/portNumVR" />
+
+    </RelativeLayout>
+
+    <com.wandou.emotionrecclient.MySurfaceView
+        android:layout_width="fill_parent"
+        android:layout_height="900dp"
+        android:id="@+id/surfaceViewEEG"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="900dp"
+        android:id="@+id/loginLayoutEEG"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:id="@+id/serverIPEEG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:text="116.57.86.70"
+        android:layout_alignBaseline="@+id/textViewEEG1"
+        android:layout_alignBottom="@+id/textViewEEG1"
+        android:layout_toEndOf="@+id/textViewEEG1" />
+
+    <EditText
+        android:id="@+id/portNumEEG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="20173"
+        android:layout_alignBaseline="@+id/textViewEEG2"
+        android:layout_alignBottom="@+id/textViewEEG2"
+        android:layout_alignStart="@+id/serverIPEEG">
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textViewEEG2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="端口号："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/serverIPEEG"
+        android:layout_alignEnd="@+id/textViewEEG1"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:id="@+id/textViewEEG1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="44dp"
+        android:text="PC端IP："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+        <Button
+        android:id="@+id/buttonConnectEEG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接PC"
+            android:layout_below="@+id/portNumEEG"
+            android:layout_alignStart="@+id/portNumEEG"
+            android:layout_marginTop="18dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/buttonConnectEEG" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="192dp"
+            android:layout_height="192dp" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="192dp"
+            android:layout_height="192dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>-->
